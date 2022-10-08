@@ -88,6 +88,8 @@ export async function deployStack({
         },
         {
           env: existingStack.Env,
+          prune: true,
+          pullImage: true,
           stackFileContent: stackDefinitionToDeploy
         }
       )
